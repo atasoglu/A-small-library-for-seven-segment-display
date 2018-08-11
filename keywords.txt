@@ -1,0 +1,22 @@
+##### syntax coloring for se7enDisp #####
+
+# Datatype (Keyword1) #
+se7enDisp	KEYWORD1
+
+# Methods (Keyword2) #
+setAnode	KEYWORD2
+setCathode	KEYWORD2
+zero	KEYWORD2
+one	KEYWORD2
+two	KEYWORD2
+three	KEYWORD2
+four	KEYWORD2
+five	KEYWORD2
+six	KEYWORD2
+seven	KEYWORD2
+eight	KEYWORD2
+nine	KEYWORD2
+shotdown	KEYWORD2
+timer	KEYWORD2
+
+
