@@ -3,6 +3,7 @@ se7enDisp ssd(4,5,6,7,8,9,10); // connection pins
 
 void setup() {
   ssd.setCathode();
+  // ssd.setAnode();
 }
 
 void loop() {
