@@ -24,6 +24,8 @@ class se7enDisp
 		void seven();
 		void eight();
 		void nine();
+		void printNum(int x);
+		void blinkNum(int num, int repeat, int delayTime=500);
 		void timer(int start=9, int delayTime=1000);
 		void shotdown();
 	private:

@@ -147,6 +147,57 @@ void se7enDisp::nine()
 	digitalWrite(_pin7, x);
 }
 
+void se7enDisp::printNum(int x) 
+{
+	switch (x) 
+	{
+		case 0:
+			this->zero();
+			break;
+		case 1:
+			this->one();
+			break;
+		case 2:
+			this->two();
+			break;
+		case 3:
+			this->three();
+			break;
+		case 4:
+			this->four();
+			break;
+		case 5:
+			this->five();
+			break;
+		case 6:
+			this->six();
+			break;
+		case 7:
+			this->seven();
+			break;
+		case 8:
+			this->eight();
+			break;
+		case 9:
+			this->nine();
+			break;
+		default:
+			this->shotdown();
+			break;
+	}
+}
+
+void se7enDisp::blinkNum(int num, int repeat, int delayTime) 
+{
+	for (int i=0;i<repeat;i++) 
+	{	
+		this->printNum(num);
+		delay(delayTime);
+		this->shotdown();
+		delay(delayTime);
+	}
+}
+
 void se7enDisp::shotdown() 
 {
 	digitalWrite(_pin1, y);
@@ -164,42 +215,7 @@ void se7enDisp::timer(int start, int delayTime)
 	{
 		for (int i=start;i>=0;i--) 
 		{
-			switch (i) 
-			{
-				case 0:
-					this->zero();
-					break;
-				case 1:
-					this->one();
-					break;
-				case 2:
-					this->two();
-					break;
-				case 3:
-					this->three();
-					break;
-				case 4:
-					this->four();
-					break;
-				case 5:
-					this->five();
-					break;
-				case 6:
-					this->six();
-					break;
-				case 7:
-					this->seven();
-					break;
-				case 8:
-					this->eight();
-					break;
-				case 9:
-					this->nine();
-					break;
-				default:
-					this->shotdown();
-					break;
-			}
+			this->printNum(i);
 			delay(delayTime);
 		}
 	}
